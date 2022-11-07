@@ -379,13 +379,11 @@ body {
 
 	display: flex;
 	justify-content: center;
-
-	padding: 25px 100px;
+	align-items: center;
+	/* padding: 25px 100px; */
+	width: 270px;;
+	height: 120px;
 	background-color: var(--third-background-color);
-}
-
-.features-icon {
-	
 }
 
 /* Розділ оформлення Cpecializmm */
@@ -486,28 +484,48 @@ body {
 	margin-top: 16px;
 }
 
-.socials-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
+.socials-item {
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.socials-link:hover,
-.socials-link:focus {
+/* .socials-link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}*/
+
+.socials-link {
+	width: 100%;
+	height: 100%;
+
+	border-radius: 50%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.socials-link:hover,:focus {
 	background-color: var(--comon-blue);
 }
 
-.socials-icon {
-	fill: #AFB1B8;
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon {
+	fill: #ffffff
 }
 
-.socials-link:hover .socials-icon, 
-.socials-link:focus .socials-icon {
-	fill:#ffffff
+.socials-icon {
+fill: #AFB1B8;
 }
 
 /*Розділ оформлення Клієнти*/
@@ -528,17 +546,23 @@ body {
 	justify-content: space-between;
 }
 
+.clients-list .list-item {
+	width: 169px;
+	height: 91px;
+	border: 1px solid #AFB1B8;
+}
 
+/*
 .clients-link {
 	min-width: 170px;
 	min-height: 92px;
-		
-	padding: 15px 31px;
-	border: 1px solid #AFB1B8;
 
-	display: flex;
+    padding: 15px 31px;
+    border: 1px solid #AFB1B8;
 
-	color: #AFB1B8;
+    display: flex;
+    
+    color: #AFB1B8;
 }
 
 .clients-link:hover,:focus {
@@ -548,6 +572,29 @@ body {
 
 .clients-icon {
 	fill:currentColor;
+}
+*/
+
+.clients-link {
+    width: 100%;
+    height: 100%;
+	
+    display: flex;
+    align-items: center;
+	justify-content: center;
+}
+
+.clients-list .list-item:hover,:focus {
+	border-color: var(--comon-blue);
+}
+
+.clients-list .list-item:hover .clients-icon,
+.clients-list .list-item:focus .clients-icon {
+	fill:var(--comon-blue);
+}
+
+.clients-icon {
+	fill: #AFB1B8;
 }
 
 /* Розділ оформлення футера */
@@ -625,7 +672,7 @@ body {
 	color: var(--main-background-color);
 }
 
-.base .socials-link:not(:hover, :focus) {
+.base .socials-item:not(:hover, :focus) {
 	background: rgba(255, 255, 255, 0.1);
 }
 
