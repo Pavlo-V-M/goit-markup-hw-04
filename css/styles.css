@@ -513,19 +513,26 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	color: #AFB1B8;
 }
 
 .socials-link:hover,:focus {
 	background-color: var(--comon-blue);
+	color: #ffffff;
 }
 
-.socials-link:hover .socials-icon,
+/* .socials-link:hover .socials-icon,
 .socials-link:focus .socials-icon {
 	fill: #ffffff
-}
+} */
+
+/*.socials-icon {
+fill: #AFB1B8;
+}*/
 
 .socials-icon {
-fill: #AFB1B8;
+	fill: currentColor;
 }
 
 /*Розділ оформлення Клієнти*/
@@ -547,9 +554,8 @@ fill: #AFB1B8;
 }
 
 .clients-list .list-item {
-	width: 169px;
-	height: 91px;
-	border: 1px solid #AFB1B8;
+	width: 170px;
+	height: 92px;
 }
 
 /*
@@ -582,19 +588,22 @@ fill: #AFB1B8;
     display: flex;
     align-items: center;
 	justify-content: center;
+
+	border: 1px solid #AFB1B8;
+	color: #AFB1B8;
 }
 
-.clients-list .list-item:hover,:focus {
+.clients-link:hover,:focus {
 	border-color: var(--comon-blue);
+	color: var(--comon-blue);
 }
 
-.clients-list .list-item:hover .clients-icon,
-.clients-list .list-item:focus .clients-icon {
+.clients-link:hover,:focus .clients-icon {
 	fill:var(--comon-blue);
 }
 
 .clients-icon {
-	fill: #AFB1B8;
+	fill: currentColor;
 }
 
 /* Розділ оформлення футера */
@@ -609,7 +618,6 @@ fill: #AFB1B8;
 }
 
 .base-address {
-	display: ;
 	outline: 2px solid red;
 	margin-top: 20px;
 }
@@ -722,11 +730,11 @@ fill: #AFB1B8;
 	background-color: var(--comon-blue);
 	color: #ffffff;
 	cursor: pointer;
+	/*shadow-middle */
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter-nav .click.all {
-	/*shadow-middle */
-	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	padding: 6px 25px;
 }
 
@@ -762,6 +770,10 @@ fill: #AFB1B8;
 	margin-bottom: 0px;
 }
 
+.projects-list .list-item:hover,:focus {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .projects-subtitle {
 	outline: 2px solid tomato;
 
@@ -770,12 +782,13 @@ fill: #AFB1B8;
 	line-height: 2;
 	letter-spacing: 0.06em;
 }
-
+/*
+довелось зменшить letter-spacing 2-го h2 
+до 0.06 тому, що текст не влазить
 .projects-subtitle:nth-child(2) {
 	letter-spacing: 0.03em;
-/*довелось зменшить letter-spacing 2-го h2 
-до 0.06 тому, що текст не влазить */
-}
+} 
+*/
 
 .projects-text {
 	outline: 2px solid tomato;
